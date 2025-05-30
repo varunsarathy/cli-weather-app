@@ -1,10 +1,13 @@
+from dotenv import load_dotenv
+import os
 import argparse
 import pyfiglet
 import requests
 from simple_chalk import chalk
 
-# API key for openweathermap API
-API_KEY = "f9c3aa4c9f91276c43fa9216245c27cf"
+# Load environment variables from .env file
+load_dotenv()
+API_KEY = os.getenv("API_KEY")
 
 # Base URL for openweathermap API
 BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
